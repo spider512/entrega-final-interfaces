@@ -12,7 +12,7 @@ const Footer = () => {
                         Una App de Ezequiel Pereira
                     </div>
                     <div className="col">
-                        HUNAHUR
+                        UNAHUR
                     </div>
                     <div className="col">
                          <a href="https://wa.me/541150452626">Contacta al creador</a>
