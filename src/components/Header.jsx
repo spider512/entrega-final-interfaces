@@ -17,7 +17,7 @@ const Header = () => {
     return ( 
         
         <Fragment>
-            <div class="col">
+            <div className="col">
                 <div className="col"> 
                     <div class="card-header">
                         <div className="row"> <h3>Ruleta de Gifs</h3></div>

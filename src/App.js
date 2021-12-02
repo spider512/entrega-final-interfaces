@@ -7,7 +7,7 @@ import "./App.css"
 function App() {
 
   const [gif,setGif] = useState([]);
-  const [titulo,setTitulo] = useState({});
+  
 
 
 
@@ -38,15 +38,14 @@ function App() {
     <Fragment>
       <Header/>
 
-      <div class="row responsi">
+      <div className="row responsi">
 
-      <div class= "col " id="buscar">
-           <button class="btn btn-outline-success w100 p-3" type="submit" style={{fontSize:25}} onClick={buscaGif} >Traer GIF</button>
+      <div className= "col " id="buscar">
+           <button className="btn btn-outline-success w100 p-3" type="submit" style={{fontSize:25}} onClick={buscaGif} >Traer GIF</button>
         </div>
 
 
-        <div class="col " id="contenedorImagen" class="img-fluid" alt="Responsive image"
-         >
+        <div className="col img-fluid" id="contenedorImagen"  alt="Responsive image" >
         
          <ImagenRandom  
           gif = {gif}
