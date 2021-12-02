@@ -1,18 +1,21 @@
-import React from 'react';
+import React, { Fragment } from 'react';
+
 
  
 
 
 const Random = ({gif}) => {
+
+
      return ( 
 
-
-      <div className="col">
+      <Fragment>
+      <div className="col" >
         <div >
             <img src={gif} alt="" />
-            
         </div>
       </div>
+      </Fragment>
 
 
 

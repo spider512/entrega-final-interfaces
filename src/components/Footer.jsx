@@ -6,7 +6,7 @@ const Footer = () => {
    
     return (
         <Fragment >
-            <div class="card-footer text-muted fixed-bottom" >
+            <div class="card-footer text-muted fixed-bottom align-self-end" >
                 <div className="row">
                     <div className="col">
                         Una App de Ezequiel Pereira

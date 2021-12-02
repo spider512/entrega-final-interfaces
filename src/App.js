@@ -6,16 +6,12 @@ import "./App.css"
 
 function App() {
 
-  const [gif,setGif] = useState({})
-
-  /* const [titulo,setTitulo] = useState({}) */
-
-
-
-  //Buscar el Gif en la API
+  const [gif,setGif] = useState([]);
+  const [titulo,setTitulo] = useState({});
 
 
 
+//Buscar el Gif en la API
   const buscaGif = async () => {
 
     try {       
@@ -23,10 +19,10 @@ function App() {
       const api = await fetch('https://api.giphy.com/v1/gifs/random?api_key=4bJpyE6nA2yJagKzCPLf7SPwG4WJb3KH')
 
       const gifUrl = await api.json()
-
-      setGif(gifUrl.data.images.downsized_large.url)
-      /* setTitulo(gifUrl.data.title) */
       
+      setGif(gifUrl.data.images.downsized_large.url);
+      
+           
 
     }
     catch (error) {
@@ -42,30 +38,26 @@ function App() {
     <Fragment>
       <Header/>
 
-      <div class="row">
-      
-        <div id="contenedorImagen" class="col" >
-        
-         <ImagenRandom  gif={gif} />
-        {/* <h5>{titulo}</h5> */}
+      <div class="row responsi">
 
+      <div class= "col " id="buscar">
+           <button class="btn btn-outline-success w100 p-3" type="submit" style={{fontSize:25}} onClick={buscaGif} >Traer GIF</button>
+        </div>
+
+
+        <div class="col " id="contenedorImagen" class="img-fluid" alt="Responsive image"
+         >
+        
+         <ImagenRandom  
+          gif = {gif}
+         />
+    
         </div>
           
-        <div class= "col" id="buscar">
-           <button class="btn btn-outline-success w100 p-5" type="submit" onClick={buscaGif} >Traer GIF</button>
-        </div>
-
-
 
       </div>
-
-
-
-
-
       <Footer/>
       
-
     </Fragment>
 
   );
